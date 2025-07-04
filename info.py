@@ -81,7 +81,7 @@ DATA_DATABASE_URL = environ.get('DATA_DATABASE_URL', "mongodb+srv://alanshal9633
 if len(DATA_DATABASE_URL) == 0:
     logger.error('DATA_DATABASE_URL is missing, exiting now')
     exit()
-FILES_DATABASE_URL = environ.get('FILES_DATABASE_URL', "")
+FILES_DATABASE_URL = environ.get('FILES_DATABASE_URL', "mongodb+srv://alanshal9633:alanshal9633@alanshal.5i3l1tp.mongodb.net/?retryWrites=true&w=majority&appName=Alanshal")
 if len(FILES_DATABASE_URL) == 0:
     logger.error('FILES_DATABASE_URL is missing, exiting now')
     exit()
