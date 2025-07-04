@@ -32,14 +32,14 @@ API_HASH = environ.get('API_HASH', 'd299cb7fbd24ae9848bf5867442c19e7')
 if len(API_HASH) == 0:
     logger.error('API_HASH is missing, exiting now')
     exit()
-BOT_TOKEN = environ.get('BOT_TOKEN', '7800249451:AAHFXCFQgLx146cBsa3Ix4VELrj2l43_wdo')
+BOT_TOKEN = environ.get('BOT_TOKEN', '7820241308:AAFp91zCFfYefzlgapTYr22AYRK2_BvihOA')
 if len(BOT_TOKEN) == 0:
     logger.error('BOT_TOKEN is missing, exiting now')
     exit()
 PORT = int(environ.get('PORT', '80'))
 
 # Upload your images to "postimages.org" and get direct link
-PICS = (environ.get('PICS', 'https://i.postimg.cc/8C15CQ5y/1.png https://i.postimg.cc/gcNtrv0m/2.png https://i.postimg.cc/cHD71BBz/3.png https://i.postimg.cc/F1XYhY8q/4.png https://i.postimg.cc/1tNwGVxC/5.png https://i.postimg.cc/dtW30QpL/6.png https://i.postimg.cc/139dvs3c/7.png https://i.postimg.cc/QtXVtB8K/8.png https://i.postimg.cc/y8j8G1XV/9.png https://i.postimg.cc/zDF6KyJX/10.png https://i.postimg.cc/fyycVqzd/11.png https://i.postimg.cc/26ZBtBZr/13.png https://i.postimg.cc/PJn8nrWZ/14.png https://i.postimg.cc/cC7txyhz/15.png https://i.postimg.cc/kX9tjGXP/16.png https://i.postimg.cc/zXjH4NVb/17.png https://i.postimg.cc/sggGrLhn/18.png https://i.postimg.cc/y8pgYTh7/19.png')).split()
+PICS = (environ.get('PICS', 'https://www.hdwallpapers.in/download/blue_eyes_naruto_uzumaki_minato_namikaze_rasengan_4k_hd_naruto_jpeg-2560x1440.jpg')).split()
 
 # Bot Admins
 ADMINS = environ.get('ADMINS', '8091916399')
@@ -50,7 +50,7 @@ else:
     ADMINS = [int(admins) for admins in ADMINS.split()]
 
 # Channels
-INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '').split()]
+INDEX_CHANNELS = [int(index_channels) if index_channels.startswith("-") else index_channels for index_channels in environ.get('INDEX_CHANNELS', '-1002264326677 -1002239734551 -1002189644835 -1002432923495 -1002607953782 -1001685513854').split()]
 if len(INDEX_CHANNELS) == 0:
     logger.info('INDEX_CHANNELS is empty')
 LOG_CHANNEL = environ.get('LOG_CHANNEL', '-1002599309626')
@@ -59,10 +59,10 @@ if len(LOG_CHANNEL) == 0:
     exit()
 else:
     LOG_CHANNEL = int(LOG_CHANNEL)
-FORCE_SUB_CHANNELS = [int(fsub_channels) for fsub_channels in environ.get('FORCE_SUB_CHANNELS', '').split()]
+FORCE_SUB_CHANNELS = [int(fsub_channels) for fsub_channels in environ.get('FORCE_SUB_CHANNELS', '-1002537832186 -1002518345349 -1002253684616').split()]
 if len(FORCE_SUB_CHANNELS) == 0:
     logger.info('FORCE_SUB_CHANNELS is empty')
-REQUEST_FORCE_SUB_CHANNELS = environ.get('REQUEST_FORCE_SUB_CHANNELS', '')
+REQUEST_FORCE_SUB_CHANNELS = environ.get('REQUEST_FORCE_SUB_CHANNELS', '-1002832766371 -1002828777146 -1002871953777')
 if len(REQUEST_FORCE_SUB_CHANNELS) == 0:
     logger.info('REQUEST_FORCE_SUB_CHANNELS is empty')
 else:
@@ -85,7 +85,7 @@ FILES_DATABASE_URL = environ.get('FILES_DATABASE_URL', "mongodb+srv://alanshal96
 if len(FILES_DATABASE_URL) == 0:
     logger.error('FILES_DATABASE_URL is missing, exiting now')
     exit()
-SECOND_FILES_DATABASE_URL = environ.get('SECOND_FILES_DATABASE_URL', "")
+SECOND_FILES_DATABASE_URL = environ.get('SECOND_FILES_DATABASE_URL', "mongodb+srv://alanshal9633:alanshal9633@alanshal.5i3l1tp.mongodb.net/?retryWrites=true&w=majority&appName=Alanshal")
 if len(SECOND_FILES_DATABASE_URL) == 0:
     logger.info('SECOND_FILES_DATABASE_URL is empty')
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
@@ -93,10 +93,10 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Files')
 
 # Links
 SUPPORT_LINK = environ.get('SUPPORT_LINK', 'https://t.me/+Byx_TR0MPediYWI1')
-UPDATES_LINK = environ.get('UPDATES_LINK', '')
+UPDATES_LINK = environ.get('UPDATES_LINK', 'https://t.me/+OFblnlif6K5jMDZl')
 FILMS_LINK = environ.get('FILMS_LINK', 'https://t.me/+Byx_TR0MPediYWI1')
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/HA_Bots")
-VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "")
+TUTORIAL = environ.get("TUTORIAL", "https://t.me/NarutoSeriesUpdates")
+VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/NarutoSeriesUpdates/12")
 
 # Bot settings
 TIME_ZONE = pytz.timezone(environ.get("TIME_ZONE", 'Asia/Colombo'))
@@ -129,13 +129,13 @@ SHORTLINK = is_enabled('SHORTLINK', False)
 
 # for stream
 IS_STREAM = is_enabled('IS_STREAM', True)
-BIN_CHANNEL = environ.get("BIN_CHANNEL", "")
+BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1002773777484")
 if len(BIN_CHANNEL) == 0:
     logger.error('BIN_CHANNEL is missing, exiting now')
     exit()
 else:
     BIN_CHANNEL = int(BIN_CHANNEL)
-URL = environ.get("URL", "")
+URL = environ.get("URL", "https://t.me/+6j_hPRMDQCpkNGFl")
 if len(URL) == 0:
     logger.error('URL is missing, exiting now')
     exit()
@@ -156,12 +156,12 @@ STICKERS = [sticker for sticker in environ.get('STICKERS', 'CAACAgIAAxkBAAEN4ctn
 
 # for Premium 
 PRE_DAY_AMOUNT = int(environ.get('PRE_DAY_AMOUNT', '10')) # add amount in INR for premium charge pre day 
-UPI_ID = environ.get("UPI_ID", "")
+UPI_ID = environ.get("UPI_ID", "sha194832@okaxis")
 if len(UPI_ID) == 0:
     logger.error('UPI_ID is missing, exiting now')
     exit()
-UPI_NAME = environ.get("UPI_NAME", "") # add your UPI account name
+UPI_NAME = environ.get("UPI_NAME", "Remya") # add your UPI account name
 if len(UPI_NAME) == 0:
     logger.error('UPI_NAME is missing, exiting now')
     exit()
-RECEIPT_SEND_USERNAME = environ.get("RECEIPT_SEND_USERNAME", "@Hansaka_Anuhas")
+RECEIPT_SEND_USERNAME = environ.get("RECEIPT_SEND_USERNAME", "@Alanshal")
